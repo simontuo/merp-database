@@ -18,7 +18,6 @@ class CreateRolesTable extends Migration
 			$table->string('name', 100)->comment('名称');
 			$table->string('label', 100)->comment('标签');
 			$table->string('desc')->default('')->comment('描述');
-            $table->boolean('enable')->default(true)->comment('启用');
             $table->timestamps();
 		});
 		
