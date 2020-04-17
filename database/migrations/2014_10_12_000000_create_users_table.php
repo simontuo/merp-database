@@ -19,7 +19,9 @@ class CreateUsersTable extends Migration
 			$table->string('phone', 11)->unique()->comment('手机');
 			$table->string('email')->unique()->nullable()->comment('邮箱');
             // $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->comment('密码');
+			$table->string('password')->comment('密码');
+			$table->string('avatar')->comment('头像');
+			$table->boolean('enable')->default(true)->comment('启用');
             $table->rememberToken();
             $table->timestamps();
 		});
