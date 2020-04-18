@@ -22,6 +22,9 @@ class CreateTenantsTable extends Migration
 			$table->string('contact_address')->comment('联系地址');
 			$table->unsignedInteger('size')->comment('规模');
 			$table->unsignedInteger('creator_id')->comment('创建人id');
+			$table->date('contract_start_at')->nullable()->comment('合约开始日期');
+			$table->date('contract_end_at')->nullable()->comment('合约结束日期');
+			$table->boolean('enable')->default(false)->comment('启用');
             $table->timestamps();
 		});
 		\DB::statement("ALTER TABLE `tenants` comment '租户表'");
